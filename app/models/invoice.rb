@@ -7,4 +7,8 @@ class Invoice < ApplicationRecord
   def set_total_price
     self.total_price = quantity * album.price
   end
+
+  def self.total_revenue
+    (sum(:total_price) / 100.0).round(2)
+  end
 end
