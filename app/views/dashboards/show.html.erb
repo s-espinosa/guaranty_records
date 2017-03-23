@@ -1,5 +1,5 @@
 <h1>Employee Dashboard</h1>
 
-Employee: <%= @employee.full_name %>
-Total Sales: <%= @employee.total_revenue %>
+<p>Employee: <%= full_name(@employee) %></p>
+<p>Total Sales: <%= @employee.formatted_total_revenue %></p>
 
