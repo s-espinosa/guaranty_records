@@ -9,6 +9,10 @@ class Invoice < ApplicationRecord
   end
 
   def self.total_revenue
-    (sum(:total_price) / 100.0).round(2)
+    sum(:total_price) / 100.0
+  end
+
+  def self.formatted_total_revenue
+    "$#{sprintf('%.2f', total_revenue)}"
   end
 end

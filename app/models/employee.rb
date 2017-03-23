@@ -7,6 +7,6 @@ class Employee < ApplicationRecord
   end
 
   def formatted_total_revenue
-    "$#{sprintf('%.2f', total_revenue)}"
+    invoices.formatted_total_revenue
   end
 end
