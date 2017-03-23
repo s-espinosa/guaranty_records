@@ -5,8 +5,4 @@ class Employee < ApplicationRecord
   def total_revenue
     invoices.total_revenue
   end
-
-  def formatted_total_revenue
-    invoices.formatted_total_revenue
-  end
 end

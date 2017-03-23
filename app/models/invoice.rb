@@ -11,8 +11,4 @@ class Invoice < ApplicationRecord
   def self.total_revenue
     sum(:total_price) / 100.0
   end
-
-  def self.formatted_total_revenue
-    "$#{sprintf('%.2f', total_revenue)}"
-  end
 end
