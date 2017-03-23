@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
   def show
     employee = Employee.first
-    @employee = EmployeesPresenter.new(employee)
+    @employee = EmployeeDecorator.new(employee)
   end
 end
